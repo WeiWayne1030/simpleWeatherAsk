@@ -1,6 +1,5 @@
 import { weatherFlow } from "./weatherFlow.js";
 import readline from "readline";
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,

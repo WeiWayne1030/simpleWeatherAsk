@@ -2,10 +2,10 @@ import { z } from "genkit";
 import fs from "fs";
 import { ai } from "./ai.js";
 import { getWeather } from "./weatherTool.js";
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+import "dotenv/config";
 const promptText = fs.readFileSync("./src/weather.md", "utf8");
 async function cityToLatLon(city) {
-    const apiKey = "478641caeaf3370a06ecd504fda3a17a";
+    const apiKey = process.env.OPENWEATHER_API_KEY;
     const url = `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)}&limit=1&appid=${apiKey}`;
     const resp = await fetch(url);
     const data = await resp.json();

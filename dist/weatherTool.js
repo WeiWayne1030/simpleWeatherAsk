@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
+import "dotenv/config";
 export async function getWeather(lat, lon) {
-    const apiKey = "478641caeaf3370a06ecd504fda3a17a";
+    const apiKey = process.env.OPENWEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=zh_tw`;
     const resp = await fetch(url);
     const data = (await resp.json()); // ✅ 型別斷言
