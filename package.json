@@ -1,0 +1,22 @@
+{
+  "name": "gemini-cli-weather-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx ts-node-esm src/index.ts"
+  },
+  "dependencies": {
+    "@genkit-ai/ai": "^1.24.0",
+    "@genkit-ai/flow": "^0.5.17",
+    "@genkit-ai/google-genai": "^1.24.0",
+    "axios": "^1.13.2",
+    "dotenv": "^16.6.1",
+    "genkit": "^1.24.0",
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "zod": "^3.22.0"
+  }
+}
